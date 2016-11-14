@@ -30,6 +30,17 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+# Authentication
+gem 'devise', '~> 4.2'
+# File upload
+gem 'paperclip', '~> 4.3', '>= 4.3.6'
+# figaro - Token/Secrets
+gem 'figaro', '~> 1.1', '>= 1.1.1'
+# Favourite contacts
+gem 'likeable'
+# Fog - Storage data bucket
+gem 'fog'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
