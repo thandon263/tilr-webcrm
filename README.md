@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/thandon263/crm.svg?branch=master)](https://travis-ci.org/jasperong/crm)
+[![Build Status](https://travis-ci.org/thandon263/crm.svg?branch=master)](https://travis-ci.org/thandon263/crm)
 
 # README
 
