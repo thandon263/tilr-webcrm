@@ -2,7 +2,7 @@
 $(function () {
 
   var refresh = $.ajax({
-                    url: 'https://randomuser.me/api/?page=3&results=10&seed=abc',
+                    url: 'https://randomuser.me/api/?results=10',
                     method: 'GET',
                     data: {},
                     dataType: 'json'
@@ -28,6 +28,6 @@ $(function () {
 
                     console.alert("Request Failed!!")
 
-                }); // End of AJAX method
+            }); // End of AJAX method
 
 });// End of document ready function
