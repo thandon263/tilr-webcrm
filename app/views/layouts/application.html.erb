@@ -9,6 +9,8 @@
   </head>
 
   <body>
+    <p>Username: <%= current_user.email[/[^@]+/] %></p>
+    
     <%= yield %>
   </body>
 </html>
