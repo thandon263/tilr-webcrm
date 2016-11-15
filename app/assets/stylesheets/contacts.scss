@@ -2,8 +2,18 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-$white: #fff;
+$white: #ffffff;
+$blue-grey: #eceff1;
+$green-lighten-2: #81c784;
+$red-lighten: #ffcdd2;
+$black: rgba(0,0,0,0.6);
+$red: #ef5350;
+$yellow: #f90;
 
+.heading {
+  margin-left: 4%;
+  font-family: cursive;
+}
 .new_contact {
   float: right;
   font-size: 15pt;
@@ -26,12 +36,56 @@ $white: #fff;
 
 .user-info {
   float: right;
-  background: white;
-  border: 1px solid #000;
+  background: $blue-grey;
+  bottom: 0;
+  width: 200px;
+  border-top-right-radius: 12px;
+  border-top-left-radius: 5px;
   position: fixed;
+  padding: 4px;
   .profile-pic {
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
+    margin-left: 6px;
+    border-radius: 80px;
   }
+  .online_user {
+    color: $green-lighten-2;
+    padding: 16px;
+    border-bottom: 0.4px solid $red-lighten;
+  }
+}
 
+#a_tag {
+  text-decoration: none;
+  color: $white;
+}
+
+#side-bar {
+  position: absolute;
+  top: 100px;
+  bottom: 200px;
+  left: -410px;
+  background: $red;
+  color: $black;
+  font-size: 60px;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+}
+
+.open {
+    left: 0;
+}
+
+#panel {
+    width: 410px;
+    float: left;
+}
+
+#tab {
+    width: 40px;
+    background: $yellow;
+    cursor: pointer;
+    float: left;
 }

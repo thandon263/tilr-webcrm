@@ -1,6 +1,13 @@
-<h1>Editing Contact</h1>
+<h3 class="heading">Editing Contact</h3>
 
-<%= render 'form', contact: @contact %>
 
-<%= link_to 'Show', @contact %> |
-<%= link_to 'Back', contacts_path %>
+<div class="col-md-6 left">
+  <div class="row">
+    <div class="panel panel-danger">
+      <%= render 'form', contact: @contact %>
+
+      <%= link_to 'Show', @contact %> |
+      <%= link_to 'Back', contacts_path %>
+    </div>
+  </div>
+</div>
