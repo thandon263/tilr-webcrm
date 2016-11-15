@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
   resources :contacts do
+    collection do
+      get 'search'
+    end
     resources :post
   end
   devise_for :users

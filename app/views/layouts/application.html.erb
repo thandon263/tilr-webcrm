@@ -10,19 +10,50 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <!-- FONTAWESOME ICONS STYLES-->
     <link rel="stylesheet" href="https://path/to/font-awesome/css/font-awesome.min.css">    <!--CUSTOM STYLES-->
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.3.2/react.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.3.2/react-dom.js"></script>
+
   </head>
 
   <body>
+    <nav>
+      <div class="nav-wrapper">
+        <a href="#!" class="brand-logo">QBase</a>
+        <ul class="right hide-on-med-and-down">
+          <li><a href="sass.html"><i class="glyphicon glyphicon-search left"></i></a></li>
+          <li><a href="badges.html"><i class="glyphicon glyphicon-th-large right"></i></a></li>
+        </ul>
+      </div>
+    </nav>
 
-    <p>Username: <%= current_user.email[/[^@]+/] %></p>
+    <!-- End of Navigation Bar -->
+
+    <!-- Side bar nav -->
+    <div class="col s3">
+        <!-- Grey navigation panel -->
+    </div>
 
     <%= yield %>
+
+    <span class="user-info">
+      <div class="profile-pic">
+        <%= image_tag 'http://www.helenplum.org/sites/default/files/placeholder.png', width: '50px', height: '50px' %>
+      </div>
+      <p>
+        <%%>
+      </p>
+    </span>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <!-- METISMENU SCRIPTS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/metisMenu/2.5.2/metisMenu.js"></script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
     <!-- CUSTOM SCRIPTS -->
   </body>
 </html>

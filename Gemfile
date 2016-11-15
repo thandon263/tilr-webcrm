@@ -29,7 +29,8 @@ gem 'jbuilder', '~> 2.5'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
-
+# searchkick
+gem 'searchkick'
 # Authentication
 gem 'devise', '~> 4.2'
 # File upload
