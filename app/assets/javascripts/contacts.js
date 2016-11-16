@@ -4,38 +4,28 @@ $(function () {
   // Initializing side bar open to false
   var sideBarOpen = false;
   $('body').bind('keyup', activated);
-  $('.tab').bind('click', activated);
+  $('#tab').bind('click', activated);
 
   function activated (event) {
-    $('.label').text("KEY PRESSED = " + String.fromCharCode(event.keyCode));
+    $('#label').text("KEY PRESSED = " + String.fromCharCode(event.keyCode));
 
     if(event.keyCode == 77 || event.type == "click") {
-      $('.menu').toggleClass('open');
+      $('#menu').toggleClass('open');
       sideBarOpen=!sideBarOpen;
     }
     if(sideBarOpen){
-      $('.tab').html('&laquo;');
+      $('#tab').html('&laquo;');
     };
 
-    $('.label2').text('MENU OPEN: ' + sideBarOpen.toString());
+    $('#label2').text('MENU OPEN: ' + sideBarOpen.toString());
   };
 
 // End of function for menu open (sideBarOpen)
 
-// Search Bar Javascript
-
-          // $('.search-panel .dropdown-menu').find('a').click(function(e) {
-          //   e.preventDefault();
-          //   var param = $(this).attr("href").replace("#","");
-          //   var concept = $(this).text();
-          //   $('.search-panel span#search_concept').text(concept);
-          //   $('.input-group #search_param').val(param);
-          // });
-
 // End of Search Bar
 
    $.ajax({
-      url: 'https://randomuser.me/api/?results=10',
+      url: 'https://randomuser.me/api/?results=5',
       method: 'GET',
       data: {},
       dataType: 'json'

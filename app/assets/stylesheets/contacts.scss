@@ -1,6 +1,8 @@
 // Place all the styles related to the contacts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+// All Rights Reserved
+
 
 $white: #ffffff;
 $blue-grey: #eceff1;
@@ -39,6 +41,7 @@ $yellow: #f90;
   background: $blue-grey;
   bottom: 0;
   width: 200px;
+  height: 50px;
   border-top-right-radius: 12px;
   border-top-left-radius: 5px;
   position: fixed;
@@ -56,15 +59,22 @@ $yellow: #f90;
   }
 }
 
+.user-info:hover{
+  height: 119px;
+  -webkit-transition: all 0.4s ease-in;
+  -moz-transition: all 0.4s ease-in;
+  transition: all .4s ease-in-out;
+}
+
 #a_tag {
   text-decoration: none;
   color: $white;
 }
 
 #side-bar {
-  position: absolute;
-  top: 100px;
-  bottom: 200px;
+  position: fixed;
+  top: 200px;
+  bottom: 100px;
   left: -410px;
   background: $red;
   color: $black;
@@ -73,6 +83,7 @@ $yellow: #f90;
   transition: all 0.4s ease;
   -moz-transition: all 0.4s ease;
 }
+
 
 .open {
     left: 0;
@@ -84,7 +95,7 @@ $yellow: #f90;
 }
 
 #tab {
-    width: 40px;
+    width: 70px;
     background: $yellow;
     cursor: pointer;
     float: left;
