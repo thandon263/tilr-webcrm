@@ -1,4 +1,7 @@
 class Contact < ApplicationRecord
+  # Each of these scopes defines a class method on Contact
+  include Filterable
+
   validate :first_name, :last_name, :address, :state, :gender
   belongs_to :user
   # Searchkick learns what your users are looking for

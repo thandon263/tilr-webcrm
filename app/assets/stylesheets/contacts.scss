@@ -11,6 +11,7 @@ $red-lighten: #ffcdd2;
 $black: rgba(0,0,0,0.6);
 $red: #ef5350;
 $yellow: #f90;
+$black-opacity: rgba(0,0,0,0.4);
 
 .heading {
   margin-left: 4%;
@@ -54,9 +55,19 @@ $yellow: #f90;
   }
   .online_user {
     color: $green-lighten-2;
-    padding: 16px;
-    border-bottom: 0.4px solid $red-lighten;
+    margin-top: 14px;
+    padding: 7px;
+    width: 100%;
+    border-top: 0.4px solid $red-lighten;
   }
+}
+
+#footer {
+  width: 100%;
+  position: absolute;
+  margin-top: 400px;
+  bottom: 0;
+  z-index: 2;
 }
 
 .user-info:hover{
@@ -103,4 +114,47 @@ $yellow: #f90;
     background: $yellow;
     cursor: pointer;
     float: left;
+}
+
+// Show page contacts
+
+.show_container{
+  width: 40%;
+  margin: 50px auto;
+}
+
+
+//  Media Queries Doing the Job here Don't Disturb
+
+@media only screen and (max-width : 992px) {
+  #side-bar {
+    display: none;
+  }
+
+  .user-info{
+    width: 100%;
+    height: 12px;
+    background: $black-opacity;
+    &hover{
+      height: 30px;
+    }
+    .online_user{
+      margin-top: -12px;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+    .header{
+        text-align : center;
+    }
+
+    .picture_show {
+      width: 30%;
+      height: 30%;
+    }
+
+    .nav{
+        margin-top : 30px;
+    }
 }

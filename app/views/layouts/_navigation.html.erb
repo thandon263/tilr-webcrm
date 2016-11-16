@@ -1,5 +1,5 @@
 <nav>
-  <div class="nav-wrapper">
+  <div class="nav-wrapper blue darken-1">
     <a href="#" class="brand-logo" id="a_tag" >QBase</a>
     <ul class="right hide-on-med-and-down">
       <li><a href="sass.html"><i class="glyphicon glyphicon-search left"></i></a></li>
@@ -10,12 +10,10 @@
         <%#= link_to 'My Profile', user_path(@user), method: :get %>
         </li>
           <li><%= link_to 'Contacts', contacts_path, method: :get, class: 'sessionCtrlr', id: 'a_tag' %></li>
-          <li><%= link_to 'Logout', destroy_user_session_path(@user), method: :post, class: 'sessionCtrlr', id: 'a_tag' %></li>
-
       <% else %>
 
-        <li><%= link_to 'Register', new_user_path, id: 'a_tag' %></li>
-        <li><%= link_to 'Login', :login, id: 'a_tag' %></li>
+        <li><%= link_to 'Dashboard', contacts_path, id: 'a_tag' %></li>
+        <li><%= link_to '',  id: 'a_tag' %></li>
 
       <% end %>
 

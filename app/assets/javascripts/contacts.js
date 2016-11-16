@@ -11,7 +11,7 @@ $(function () {
 
     if(event.keyCode == 77 || event.type == "click") {
       $('#menu').toggleClass('open');
-      sideBarOpen=!sideBarOpen;
+
     }
     if(sideBarOpen){
       $('#tab').html('&laquo;');
@@ -32,16 +32,18 @@ $(function () {
     }).done(function(responseData){
       // Variable to stored data after looping through responseData
       var contact_details = '';
+      var images = '';
       // log results on the console
       console.log(responseData);
       // Loop through responseData and push into contact_details
       $.each(responseData.results, function(i, item) {
 
         contact_details += "<tr><td>" + responseData.results[i].name["first"] + "</td><td>" + responseData.results[i].name["last"] + "</td><td>" + responseData.results[i].location["street"] + "</td><td>" + responseData.results[i].gender + "</td></tr>";
-        console.log(responseData.results[i].picture['thumbnail']);
+        images += "<img " + "src="+ "`${responseData.results[i].picture['thumbnail']}`" + " />"
       });
 
       $('tbody').append(contact_details);
+      console.log(images);
 
     }).success(function(){
       console.log("Request Complete!!");

@@ -28,6 +28,10 @@ gem 'jbuilder', '~> 2.5'
 # gem 'bcrypt', '~> 3.1.7'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+
+# Interface between Ruby and ImageMagick
+gem 'rmagick', '~> 2.15', '>= 2.15.4'
+# # # # # # # # # # # # # ##  # # # #
 gem 'mini_magick', '~> 4.5', '>= 4.5.1'
 # searchkick
 gem 'searchkick'

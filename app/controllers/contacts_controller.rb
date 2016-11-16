@@ -5,6 +5,11 @@ class ContactsController < ApplicationController
   # GET /contacts.json
   def index
     @contacts = Contact.all.limit(10)
+
+    @contacts = Contact.where(nil)
+    filtering_params(params).each do |key, value|
+      @contacts = @contacts.public_send(key, value) if value.present?
+    end
   end
 
   # GET /contacts/1
@@ -70,6 +75,11 @@ class ContactsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def contact_params
-      params.require(:contact).permit(:first_name, :last_name, :address, :gender, :picture, :state)
+      params.require(:contact).permit(:first_name, :last_name, :address, :gender, :picture, :description, :state)
+    end
+
+    # A list of the params names that can be used
+    def filtering_params(params)
+      params.slice(:state, :address, :starts_with)
     end
 end
