@@ -6,61 +6,33 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
     <!-- BOOTSTRAP STYLES-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <!-- FONTAWESOME ICONS STYLES-->
     <link rel="stylesheet" href="https://path/to/font-awesome/css/font-awesome.min.css">    <!--CUSTOM STYLES-->
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
+
   </head>
 
   <body>
-    <nav>
-      <div class="nav-wrapper">
-        <a href="#" class="brand-logo" id="a_tag" >QBase</a>
-        <ul class="right hide-on-med-and-down">
-          <li><a href="sass.html"><i class="glyphicon glyphicon-search left"></i></a></li>
-          <li><%= link_to '' %><i class="glyphicon glyphicon-user right"></i></a></li>
-        </ul>
-      </div>
-    </nav>
-
-    <!-- End of Navigation Bar -->
-
+    <!-- navigation tag partial rendered -->
+    <%= render partial: 'layouts/navigation' %>
     <!-- Side bar nav -->
-    <div id="side-bar">
-        <!-- Grey navigation panel -->
-        <div id="panel">
-          Now You <br> See Me!
-        </div>
-        <div id="tab">
-          &raquo;
-        </div>
-    </div>
-
-
+    <%= render partial: 'layouts/sideBar' %>
+    <!-- Yield a block of code -->
     <%= yield %>
 
+    <%= render partial: 'layouts/onlineChat' %>
 
+    <%= render partial: 'layouts/importFiles' %>
 
-      <span class="user-info">
-        <div class="profile-pic">
-          <%= image_tag 'http://www.helenplum.org/sites/default/files/placeholder.png', width: '50px', height: '50px' %>
-        </div>
-        <p class="col-md-12 online_user right">
-          Online:  <%= current_user.email[/[^@]+/] %>
-          <%= current_user.email %>
-        </p>
-      </span>
-
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    <!-- METISMENU SCRIPTS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/metisMenu/2.5.2/metisMenu.js"></script>
-    <!-- Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
-    <!-- CUSTOM SCRIPTS -->
+    <!-- footer of the page -->
+    <%#= render partial: 'layouts/footer' %>
   </body>
 </html>

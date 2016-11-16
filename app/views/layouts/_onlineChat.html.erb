@@ -1,0 +1,9 @@
+<span class="user-info">
+  <div class="profile-pic">
+    <%#= image_tag(current_user.picture_url), width: '50px', height: '50px' %>
+  </div>
+  <p class="col-md-12 online_user right">
+    Online:  <%= current_user.email[/[^@]+/] %>
+    <%= current_user.email %>
+  </p>
+</span>

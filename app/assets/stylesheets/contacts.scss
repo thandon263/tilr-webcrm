@@ -74,7 +74,7 @@ $yellow: #f90;
 #side-bar {
   position: fixed;
   top: 200px;
-  bottom: 100px;
+  bottom: 200px;
   left: -410px;
   background: $red;
   color: $black;
@@ -84,6 +84,10 @@ $yellow: #f90;
   -moz-transition: all 0.4s ease;
 }
 
+.sessionCtrlr {
+  line-height: 64px;
+  margin-right: 4%;
+}
 
 .open {
     left: 0;
