@@ -35,7 +35,7 @@ USER Show:
 To view the description text, you have to click on the image name. It will trigger an slide the text over the image. If you click on the image there will be a cloud or obscure foreground.
 
 Description:
-![Users](public/images/Screen Shot 2016-11-16 at 11.15.15 PM.png)
+![Users](public/images/Screen Shot 2016-11-16 at 11.15.31 PM.png)
 
 ===
 To view the app on herokuapp. Use This Link [QBase](https://qbase.herokuapp.com)
