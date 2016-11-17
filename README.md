@@ -19,6 +19,18 @@ an open source API that can generate over 5000 user per request.
 ```console
  $  git clone git@github.com:thandon263/tilr-webcrm.git
 ```
+
+run:
+```ruby
+$ bundle install
+```
+
+and: 
+
+```ruby
+ $ rake db:migrate
+```
+
 ----
 Users will populate as soon as the document loads. User information is placed in
 cells, fields and records. This application makes use of the cloud bucket from AWS you can switch from local to cloud by changing to fog. ``` gem fog ``` upload file.
