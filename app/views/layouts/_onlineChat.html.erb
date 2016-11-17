@@ -1,9 +1,11 @@
-<span class="user-info blue lighten-3">
-  <div class="profile-pic">
-    <img src="https://cdn1.iconfinder.com/data/icons/user-pictures/100/male3-512.png" alt="My Image" width="50" height="50" />
-  </div>
-  <p class="col-md-12 blue lighten-5 online_user right">
-    Online:  <%= current_user.email[/[^@]+/] %>
-    <%= current_user.email %>
-  </p>
-</span>
+<% if current_user %>
+    <span class="user-info blue lighten-3">
+      <div class="profile-pic">
+        <img src="https://cdn1.iconfinder.com/data/icons/user-pictures/100/male3-512.png" alt="My Image" width="50" height="50" />
+      </div>
+      <p class="col-md-12 blue lighten-5 online_user right">
+        Online:  <%= current_user.email[/[^@]+/] %>
+        <%= current_user.email %>
+      </p>
+    </span>
+<% end %>

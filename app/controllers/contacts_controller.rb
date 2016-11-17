@@ -6,10 +6,11 @@ class ContactsController < ApplicationController
   def index
     @contacts = Contact.all.limit(10)
 
-    @contacts = Contact.where(nil)
-    filtering_params(params).each do |key, value|
-      @contacts = @contacts.public_send(key, value) if value.present?
-    end
+    @contacts = Contact.filter(params.slice(:state, :address, :starts_with))
+  end
+
+  def dashboard
+    @contacts = Contact.all
   end
 
   # GET /contacts/1
