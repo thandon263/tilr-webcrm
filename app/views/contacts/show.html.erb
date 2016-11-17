@@ -1,7 +1,6 @@
 
-<div class="alert alert-success" role="alert">
-  <strong>Well done!</strong><p id="notice"><%= notice %></p>
-</div>
+  <p id="notice alert alert-success"><%= notice %></p>
+
 
 <div class="show_container">
   <div class="card">
@@ -14,7 +13,7 @@
     </div>
     <div class="card-reveal">
       <span class="card-title grey-text text-darken-4"><%= @contact.first_name %><i class="material-icons right">close</i></span>
-      <p><%= @contact.description %></p>
+      <p class="description-text"><%= @contact.description %></p>
     </div>
   </div>
 
