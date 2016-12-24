@@ -48,7 +48,7 @@ gem 'figaro', '~> 1.1', '>= 1.1.1'
 # Favourite contacts
 gem 'likeable'
 # Fog - Storage data bucket
-gem 'fog'
+# gem 'fog'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
